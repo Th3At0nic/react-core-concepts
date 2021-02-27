@@ -3,11 +3,31 @@ import "./App.css";
 
 function App() {
   const products = [
-    { name: 'Samsung', price: "100", id: "1" },
-    { name: "Sony", price: "300$", id: "2" },
-    { name: "Asus", price: "140$", id: "3" },
-    { name: "Apple", price: "200$", id: "4" },
-    { name: "Acer", price: "400$", id: "5" },
+    {
+      name: "Samsung",
+      price: "100",
+      id: "1",
+    },
+    {
+      name: "Sony",
+      price: "300$",
+      id: "2",
+    },
+    {
+      name: "Asus",
+      price: "140$",
+      id: "3",
+    },
+    {
+      name: "Apple",
+      price: "200$",
+      id: "4",
+    },
+    {
+      name: "Acer",
+      price: "400$",
+      id: "5",
+    },
   ];
 
   return (
@@ -18,9 +38,8 @@ function App() {
           Edit <code> src / App.js </code> and save to reload.{" "}
         </p>{" "}
         {products.map((pd) => (
-          <Product product={pd}></Product>
-        ))}
-        {/* {<Product product={products[0]}></Product>} */}
+          <Product product={pd}> </Product>
+        ))}{" "}
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -33,6 +52,7 @@ function App() {
     </div>
   );
 }
+
 function Product(props) {
   const productStyle = {
     color: "red",
@@ -41,8 +61,7 @@ function Product(props) {
   };
   return (
     <div style={productStyle}>
-      <h1>Name: {props.name} </h1>
-      <h3>Price: {props.price} </h3>
+      <h1> Name: {props.name} </h1> <h3> Price: {props.price} </h3>{" "}
     </div>
   );
 }
